@@ -28,6 +28,11 @@ public class PrintFormat {
         System.out.printf("won: %-12d원\n",won);//12자리 정수 왼쪽정렬
         System.out.printf("won: %012d원",won);//오른쪽 정렬 후 0을 남은 자리에 채워줌
 
+        String result=String.format("%d",won); // String.format() 은 문자열로 만들어 준다.
+        System.out.println("result:"+result);
+
+
+
 
 
 

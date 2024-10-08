@@ -4,7 +4,7 @@ public class StudyDataType {
     public static void main(String[] args) {
         /*
         자료형: 정수형,실수형,불린형,문자형
-        특징: 타입이름이 소문자로 되어있고, 총 8개이다. 기본타입을 제외한 나머지는 reference type(참조 타입)이다.
+        특징: 타입이름이 소문자로 되어있고, 총 8개이다. 기본타입을 제외한 나머지는 (reference type(참조 타입)-레퍼런스 변수) 이다.
 
 
         *타입명 옆에 숫자는 바이트(크기)를 의미한다.
