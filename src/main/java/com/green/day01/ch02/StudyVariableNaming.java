@@ -29,7 +29,7 @@ public class StudyVariableNaming {
         6. 낙타 대문자(camelCase):
         첫 번째 단어는 소문자로 시작하고, 그 다음 단어의 첫 글자는 대문자로 작성합니다.
         변수명: userAge, totalPrice
-        함수명: calculateSum(), getUserName()
+        함수(매서드)명: calculateSum(), getUserName()
         예: myVariableName, calculateTotalAmount
 
 
