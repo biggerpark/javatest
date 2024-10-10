@@ -4,6 +4,7 @@ public class RelationalOp {
     public static void main(String[] args) {
         /*
         관계연산자
+        관계연산자는 boolen type 이다.
          */
 
         int n1=3, n2=2, n3=7;
