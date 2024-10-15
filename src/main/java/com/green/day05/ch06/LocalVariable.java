@@ -6,7 +6,7 @@ public class LocalVariable {
 
     public static void main(String[] args) {
         /*
-        지역변수
+        지역변수, 전역변수를 제외한 모든 변수는 지역변수이다. 매개변수도 지역변수에 해당된다.
 
         Scope(스코프): 변수가 살아있는 범위(변수의 접근 가능 영역, 변수가 소밀되지 않고 존재할 수 있는 영역)
 

@@ -10,5 +10,6 @@ public class InfRecul {
             return;
         }
         showHi(cnt--);//cnt 가 뒤에 --가 붙으므로 읽기->쓰기로 진행되므로 계속 cnt가 3인 showHi 메소드가 무한 반복된다.
+
     }
 }
