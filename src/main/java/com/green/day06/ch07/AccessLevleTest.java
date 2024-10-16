@@ -10,5 +10,10 @@ public class AccessLevleTest {
         //Circle2 cir=new Circle2()// Circle2 class 는 public 이 아니고 default 이므로 다른 package 에서 import 가 되지 않는다.
 
         String str="String 은 워낙 자주 사용하기 때문에 자동으로 import가 된다.";
+
+
+
+
+
     }
 }

@@ -19,12 +19,12 @@ class Circle2{ // 같은 패키지에서는 같은 이름의 class 를  쓸 수 
     private double rad=0; // private 이라는 값을 사용하여 변수를 선언하면 같은 class 안에서만 변수를 사용하거나 변환할 수 있다.
     final double PI=3.14;
 
-    public void setRad(double r){ // 음수가 들어오면 값이 변경이 안됨, 그 예외는 rad를 r로 변경하는 메소드
+    public void setRad(double r){ // 음수가 들어오면 값이 변경이 안됨, 그 예외는 rad 를 r로 변경하는 메소드
         if(rad<0){
             rad=0;
-            return;
+            return; //  특정 조건을 만족했을 때 메소드를 조기에 종료하고 싶을 때 return 을 사용
         }
-        rad=r;
+        rad=r; // rad 가 0이 아니면 전역변수인 rad 가 r로 대입
     }
 
     public double getArea(){ //원의 넓이 구하는 메소드를 리턴

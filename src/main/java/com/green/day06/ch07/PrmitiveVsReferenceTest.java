@@ -7,11 +7,12 @@ package com.green.day06.ch07;
 참조변수(Reference type)
 차이점을 설명하는 예제
 
+1)일반변수든 참조변수는 메소드를 통해 변수 자체를 변경하는 것은 불가능하다
+  변수 자체를 변경하고 싶으면 대입연산자 = 을 이용해야한다.
 
-
-핵심은 일반변수는 메소드를 호출해도 본체가 바뀌고
-참조변수는 주소값을 부여받기 때문에, 그 주소값으로 접근해서 그 주소값 안에서 바꿀거 바꾸고 한다.
-참조변수는 중간단계를 하나 더 거친다고 하면 알 수 있다.
+2)핵심은 일반변수는 메소드를 호출해도 본체가 바뀌고
+  참조변수는 주소값을 부여받기 때문에, 그 주소값으로 접근해서 그 주소값 안에서 바꿀거 바꾸고 한다.
+  참조변수는 중간단계를 하나 더 거친다고 하면 알 수 있다.
  */
 public class PrmitiveVsReferenceTest {
     public static void main(String[] args) {
@@ -26,6 +27,8 @@ public class PrmitiveVsReferenceTest {
         nb.num = 10; // main 메소드에 있는 nb 참조 변수, nb 주소값(주소값 012(예를들어))을 통해 클래스 NumberBox의 num 멤버변수를 10으로 변경 처리
         changeNum(nb); // 1)nb의 타입은 NumberBox 라는 참조타입이기 때문에 매개변수로 참조타입을 가지고 있는 메소드 호출, nb 라는 주소값을 메소드 매개변수에 보냄
         System.out.println("nb.num:" + nb.num);//3) 100
+
+
         /*
         main 메소드에 있는 nb 변수(main-nb)와 changeNum 메소드에 있는 nb 매개변수(c-nb)는 다른 공간이다.
         다만 같은 값(주소값)를 가지고 있다. 그로 인해 같은 객체에 접근할 수 있다.
@@ -34,10 +37,11 @@ public class PrmitiveVsReferenceTest {
     }
 
     public static void changeNum(int num) { // 매개변수가 다른 타입이면 똑같은 메소드명을 사용할 수 있다.
-         num = 100;
+         num = 100; // 이 메소드에서는 바뀐 num 이라는 변수는 메인메소드와 scope 가 다르기 때문에 메인메소드의 변수에는 영향을 주지 않는다.
     }
 
     public static void changeNum(NumberBox nb) { //❗17열에 있는 nb 변수와 다른 공간이다.하지만 19에서 nb 라는 주소값을 매개변수로 받기 때문에 같은 주소값을 접근한다.
+//        nb=null;
         nb = new NumberBox(); //3)이게 추가되었을때 어떻게 출력될까 생각해보기, nb 라는 주소를 새로운 대입연산자를 만나서 새로운 주소값(013)을 부여받는다.
         nb.num = 100; // 2)같은 주소값(012)으로 접근했기 때문에 그 주소값(012)의 num 을 100으로 바꾼다.
 
@@ -48,3 +52,5 @@ public class PrmitiveVsReferenceTest {
 class NumberBox {
     int num; // 객체화 할때 기본적으로 int 는 0이 세팅된다.
 }
+
+
