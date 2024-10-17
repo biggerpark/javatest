@@ -71,6 +71,10 @@ class StaticNumBox{ //멤버필드의 값을 static 으로 준것
     }
 
     static void sum(int n1,int n2){
+    /*
+    매개변수로 받은 값을 static 메소드를 이용하여, 클래스.method 를 하면 바로 계산 되도록 하는 것.
+    Math.random() 이것도 Math 라는 클래스의 random() 메소드가 static 이기 때문에 바로 Math. 으로 사용할 수 있는것. Math 의 멤버필드에 영향이 가는지 안가는지는 모른다.
+     */
         System.out.println(n1+n2);
     }
 }

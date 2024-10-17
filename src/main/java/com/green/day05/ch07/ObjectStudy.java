@@ -75,7 +75,7 @@ public class ObjectStudy {
 
         6) 기본타입(Primitive Type)를 제외한 모든 변수는 참조변수(Reference Type)이다. 기본타입은 소문자로 시작했다. int,boolen, float 등 등
 
-        7) ❗❗❗❗참조변수는 객체의 주소값을 저장한다.❗❗❗❗
+        7) ✨✨❗❗❗❗참조변수는 객체의 주소값을 저장한다.❗❗❗❗✨✨
           ex)Car abc;
           참조변수 abc 는 Car 객체 주소값만 담을 수 있다.(저장할 수 있다)
 

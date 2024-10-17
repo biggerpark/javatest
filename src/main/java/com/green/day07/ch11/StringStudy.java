@@ -1,5 +1,7 @@
 package com.green.day07.ch11;
 
+import com.green.day01.ch01.SystemOutPrintln;
+
 public class StringStudy {
     public static void main(String[] args) {
         String str1="Coffee";
@@ -24,7 +26,7 @@ public class StringStudy {
         String str7="LExi";
         String str8="Lexi";
         System.out.println(str7.equals(str8));//문자열이 같은지 비교할때 equals 를 사용한다. 주소값이 같은지 비교할때는 ==을 사용한다
-        System.out.println(str7.compareTo(str8)); // 0이 나오면 같은 문자열이다
+        System.out.println(str7.compareTo(str8)); // 0이 나오면 같은 내용의 문자열이다
         System.out.println(str7.equalsIgnoreCase(str8));//대소문자 구분없이 같은 지 비교하는 메소드, 영어만 된다.
 
         String fileNm="nice_Very.Nice.jpg";
@@ -34,8 +36,14 @@ public class StringStudy {
 
 
         int n=10;
-        String str9=n+"";
+        String str9=n+"";//이렇게 써도 되지만 밑에 처럼 쓰자.
         String str10=String.valueOf(n);//모든 타입 n 을 String 으로 변경하여 참조변수 str10에 넣을 수 있다.
+
+        System.out.println("------------");
+
+        String str11="abcdefgcd";
+        String str11Result=str11.replace("cd","CD");
+        System.out.println("str11Result"+str11Result);
 
 
 

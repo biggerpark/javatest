@@ -5,7 +5,7 @@ public class MissionExt {
         String fileNm="nice_Very.Nice.jpg";
 
 
-        String ext=fileNm.substring(fileNm.lastIndexOf("j"));
+        String ext=fileNm.substring(fileNm.lastIndexOf(".")+1);
 
 
 

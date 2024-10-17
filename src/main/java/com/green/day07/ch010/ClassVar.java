@@ -2,10 +2,10 @@ package com.green.day07.ch010;
 
 public class ClassVar {
     public static void main(String[] args) {
-        InstCnt ic1=new InstCnt();
-        InstCnt ic2=new InstCnt();
-        InstCnt ic3=new InstCnt();
-        InstCnt ic4=new InstCnt();
+        InstCnt ic1=new InstCnt();//insNum=1,value:1
+        InstCnt ic2=new InstCnt();//insNum=2,value:1
+        InstCnt ic3=new InstCnt();//insNum=3,value:1
+        InstCnt ic4=new InstCnt();//insNum=4,value:1
 
     }
 }
@@ -17,7 +17,7 @@ class InstCnt{
     InstCnt(){
         insNum++;
         value++;
-        System.out.println("인스턴스 생성:"+InstCnt.insNum);
+        System.out.println("insNum:"+InstCnt.insNum);
         System.out.println("value:"+ value);
     }
 }

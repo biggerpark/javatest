@@ -30,7 +30,7 @@ public class SystemPrintln {
         //
 
 
-        PrintStream out=System.out;
+        PrintStream out=System.out;//System 안의 멤버필드의 참조타입의 참조변수 out 의 주소값을 왼쪽의 참조변수 out에 똑같은 주소값을 대입(초기화) 해주는것
         out.println();
 
         //System: 클래스

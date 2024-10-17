@@ -27,11 +27,15 @@ class Student{
     private int age;
     private float height;
 
+//❗❗❗private 한 멤버필드가 있으면 getter method 는 무조건 있어야한다.❗❗❗
 
+/*
+class 멤버필드에서 private 으로 선언된 멤버변수들을 다른 class 에서도 불러오고싶다면 getter,setter 을 써야한다.
 
-/*class 멤버필드에서 private 으로 선언된 멤버변수들을 다른 class 에서도 불러오고싶다면 getter,setter 을 써야한다.
 이런 getter, setter 는 아래의 메소드를 정의하여 나중에 메소드를 불러와서 private 으로 되어있는 멤버변수들을 바꿀 수 있다.
+
 setter 는 값을 집어넣는것. 이렇게 집어넣는것은 두가지 방법이 있다. 아래처럼 하는 방법과 생성자를 이용하는 방법이다.
+
 getter 는 값을  빼내는것 getter 하는 방법은 하나밖에 없다.
  */
 

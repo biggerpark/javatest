@@ -19,7 +19,7 @@ class AccessWay{
         increaseCnt();
     }
 
-    void increaseCnt(){ //static 이 붙어있지 않은 메소드에서도 static 이 붙은 멤버필드의
+    void increaseCnt(){ //static 이 붙어있지 않은 메소드에서는 static 이 붙은 멤버필드의 클래스 변수를 호출할 수 있다. 그 반대는 안된다.
         num++;
     }
 }
