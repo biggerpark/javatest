@@ -19,8 +19,9 @@ public class ShuffleArray {
 
             arr[i]=arr[rIdx];
             arr[rIdx]=temp;
-
         }
+
+
 
         System.out.println(Arrays.toString(arr)); //arr 배열의 값을 출력하는 식
     }

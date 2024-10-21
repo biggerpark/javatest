@@ -5,7 +5,8 @@ public class ArrayInstance2 {
 
         // ❗❗❗객체의 주소값을 담을 수 있는 배열을 만드는 과정 ❗❗❗
 
-        Box[] arr=new Box[5];//type 에 우리가 밑에서 만든 class 를 적어 줄 수 있다
+        Box[] arr=new Box[5];//Box 배열 객체 주소값이 arr 에 들어갈 수 있다.
+        //type 에 우리가 밑에서 만든 class 를 적어 줄 수 있다
         //위는 마치 Box b0,b1,b2,b3,b4; 이렇게 표현할수 있다. 각 공간에는 Box 객체의 주소값이 들어갈 수만 있다.
 
 
@@ -24,23 +25,35 @@ public class ArrayInstance2 {
         System.out.println(arr[2]);
 
 
+        // Box class 에 String.toString(){return}이 없었으면 문자열이 출력되지 않고 주소값이 출력되었을것이다.
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
+
+
+
+
     }
 }
 
-class Box{
+class Box {
     private String conts;
 
-    Box(String conts){
-        this.conts=conts;
+    Box(String conts) {
+        this.conts = conts;
     }
 
 
     @Override
-    public String toString(){ //System.out.println(참조변수), 여기서 결과값이 원하는 결과값이 나오게 하려면 이 코드를 써야한다.만약 안쓰면 위에처럼 주소같은것이 나옴
+    public String toString() { //System.out.println(참조변수), 여기서 결과값이 원하는 결과값이 나오게 하려면 이 코드를 써야한다.만약 안쓰면 위에처럼 주소같은것이 나옴
         return conts;
+//    }
+        //오버라이딩, 상속관계를 배워야 알 수 있다. 부모가 가진 메소드를 그냥 쓸 수 있는데 내가 새롭게 정의하고 싶다
+        //모든 클래스는 Object 클래스를 상속받는다. 그래서 우리가 알지 못하는 메소드를 쓸 수 있다.
+
     }
-    //오버라이딩, 상속관계를 배워야 알 수 있다. 부모가 가진 메소드를 그냥 쓸 수 있는데 내가 새롭게 정의하고 싶다
-    //모든 클래스는 Object 클래스를 상속받는다. 그래서 우리가 알지 못하는 메소드를 쓸 수 있다.
-
-
 }
+
+
+
+

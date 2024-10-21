@@ -15,7 +15,7 @@ public class ArrayDatSwapping {
         arr[0]=arr[2];
         arr[2]=temp;
 
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr)); // 배열의 값을 문자열로 출력하게 해주는것
 
 
 

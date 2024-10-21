@@ -6,6 +6,7 @@ public class BuildString {
     public static void main(String[] args) {
         //문자열 "123'이 저장된 인스턴스 생성
         //반복문에서 문자열을 합칠때 사용
+        //StringBuilder 를 쓸 때는 문자열을 계속 수정해야할때 쓰면 좋다
         StringBuilder sb=new StringBuilder("123");
         sb.append(45678);//StringBuilder 라는 클래스의 객체 주소값 sb 참조변수의 append 매소드 사용하여 문자열 합치기
         System.out.println(sb);
@@ -31,7 +32,13 @@ public class BuildString {
 
 
         StringBuilder sb2=sb.reverse();//sb의 문자열을 반대로 뒤집고, 주소값을 그대로 리턴시켜서 StringBuilder 객체의 sb2의 주소값에 대입, 즉
+        System.out.println(sb==sb2); //위에서 sb의 주소값이 sb2로 복사되기 때문에 똑같은 주소값을 가르킨다.
         sb2.replace(0,2,"kk");//체이닝 기법, return this; 가 핵심이다
+
+        //체이닝 기법의 예시, sb3.append 는 참조변수인것을 알 수 있다. 즉 자신의 주소값을 계속 리턴하는것.
+        StringBuilder sb3=new StringBuilder("123");
+        sb3.append(45315).delete(0,2).replace(0,3,"kk");
+        System.out.println("sb3:"+sb3);
 
         System.out.println("sb:"+sb);
         System.out.println("sb==sb2:"+(sb==sb2));
