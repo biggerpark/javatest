@@ -18,7 +18,7 @@ public class TwoDimenArray {
         System.out.println("arr.length:"+arr.length);
         System.out.println("arr3.length:"+arr3.length);
 
-        //Q1) tmp1 은 무슨 타입일까
+        //Q1) tmp1 은 무슨 타입일까-배열의 주소값 타입
         //Q2) Sout 에서 7을 찍어보자
         int[] tmp1=arr3[0];
         System.out.println("tmp1[2]:"+tmp1[2]);
