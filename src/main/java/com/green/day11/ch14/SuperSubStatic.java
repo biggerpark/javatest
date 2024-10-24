@@ -6,6 +6,9 @@ public class SuperSubStatic {
       SuperCLS s2=new SuperCLS();
       SubCLS sub1=new SubCLS();
       sub1.showCount();
+
+        System.out.println(s2 instanceof SubCLS);
+
     }
 }
 class SuperCLS{

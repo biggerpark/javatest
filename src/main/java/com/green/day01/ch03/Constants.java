@@ -13,6 +13,7 @@ public class Constants {
 
         CONST_ASSIGNED=12;
 
+
         System.out.printf("상수 1: %s",MAX_SIZE+"\n");
         System.out.printf("상수 2: %c\n",CONST_CHAR);
         System.out.printf("상수 3: %d\n",CONST_ASSIGNED);

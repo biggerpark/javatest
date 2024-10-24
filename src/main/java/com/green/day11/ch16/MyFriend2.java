@@ -45,7 +45,7 @@ public class MyFriend2 {
             if(arr3[i]==null){
                 continue; // continue 와 break 구분 공부하기
             }
-            arr3[i].showInfo();
+            arr3[i].showInfo(); // 오버라이딩 되어있으면 객체 주소값 기준으로 메소드를 호출한다.
             System.out.println();
         }
 
