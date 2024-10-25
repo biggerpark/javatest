@@ -42,8 +42,7 @@ class CardTest2{
         gamer.receiveCard(cd.draw());//카드를 저장한다.
 
         gamer.showYourCards(); //무슨 카드 들고있는지 출력
-
-
+        System.out.println(gamer.getPoint());
         List<Card> list=gamer.openCards();
         System.out.println(list);
 
@@ -54,10 +53,10 @@ class CardTest3{
     public static void main(String[] args) {
         CardDeck cd=new CardDeck();
         Dealer dealer=new Dealer();
+        Gamer gamer=new Gamer();
+        Rule rule=new Rule();
         System.out.println("---------------");
 
-        dealer.receiveCard(cd.draw());
-        dealer.receiveCard(cd.draw());
         dealer.receiveCard(cd.draw());
         dealer.receiveCard(cd.draw());
         dealer.receiveCard(cd.draw());
@@ -65,6 +64,22 @@ class CardTest3{
         List<Card> list=dealer.openCards();
         System.out.println(list);
         dealer.showYourCards();
+        System.out.println(dealer.getPoint());
+        dealer.needMoreCard(cd);
+        System.out.println("---------------");
+
+        System.out.println("딜러의 점수:"+dealer.getPoint());
+
+        gamer.receiveCard(cd.draw());
+        gamer.receiveCard(cd.draw());
+        gamer.receiveCard(cd.draw());
+
+        System.out.println("게이머의 점수:"+gamer.getPoint());
+
+        rule.getWinner(dealer,gamer);
+
+
+
 
     }
 }

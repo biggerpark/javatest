@@ -13,7 +13,7 @@ public class CardDeck {
 
     public CardDeck() {
         cards = new Card[52]; //Card 객체 주소값을 저장할 수 있는 방 52개 생성
-        patterns = new String[]{"Diamond", "Heart", "Clova", "Spade"};//패턴 배열을 선언해주면서 초기화
+        patterns = new String[]{"◆", "❤", "Clova", "Spade"};//패턴 배열을 선언해주면서 초기화
 
 
 

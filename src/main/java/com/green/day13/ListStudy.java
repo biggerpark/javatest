@@ -24,7 +24,7 @@ public class ListStudy {
     5)  List 변수명=new ArrayList();
         List 변수명=new LinkedList();
         이렇게 작성이 가능하다. List 는 객체화가 불가능하고, 자식 class 들은 객체화가 가능하다.
-
+        왼쪽 타입은 그냥 List 를 쓰면 된다. List 를 쓰면 유연하게 쓸 수 있기때문에 List 타입으로 담으면 된다.
      */
 
     public static void main(String[] args) {
