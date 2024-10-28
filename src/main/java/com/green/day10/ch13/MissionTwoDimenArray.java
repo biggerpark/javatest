@@ -14,6 +14,8 @@ public class MissionTwoDimenArray {
                 {12,67,100}//명수
         };
 
+        System.out.println(score.length);
+
         /*
         영수: 합계점수, 평균점수
         상철: 합계점수, 평균점수
