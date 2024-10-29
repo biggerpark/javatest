@@ -11,7 +11,7 @@ package com.green.day14.ch17;
 
 
 [자바의 인터페이스]
-추상 메소드와 static 멤버필드만 가질 수 있는 존재
+추상 메소드와 static final 멤버필드만 가질 수 있는 존재
 
 ❗❗❗추상메소드가 매우 중요하다.❗❗❗
 
@@ -48,7 +48,7 @@ interface Printable{
     void print(String doc);
 }
 
-class PrintableImpl implements Printable{
+class PrintableImpl extends Object implements Printable{ // 자동으로 Object 를 extends 받는다.
 
     @Override
     public void print(String doc){//인터페이스를 상속받은 클래스에서 메서드는 무조건 public 이어야 하는 이유는 자바의 접근 제어 원칙과 관련이 있습니다.

@@ -34,7 +34,7 @@ class Prn909Drv implements ColorPrintable{ // 상속받는 인터페이스가 �
 
 //Prn909Drv 객체의 주소값 담을 수 있는 타입:Printable, ColorPrintable, Prn909rv
 //Prn909Drv 객체의 주소값으로 호출할 수 있는 메소드:printCMYK(), print()
-//ColorPrintable 객체의 주소값으로 호출할 수 있는 메소드:printCMYK()
+//ColorPrintable 객체의 주소값으로 호출할 수 있는 메소드:printCMYK(),print()
 //Printable 객체의 주소값으로 호출할 수 있는 메소드:print()
 
 
