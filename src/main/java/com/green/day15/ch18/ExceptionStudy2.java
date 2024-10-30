@@ -12,7 +12,7 @@ public class ExceptionStudy2 {
         int r=0;
         try{
             r=div(10,0); //2) 런타임exception(매개변수가 그냥 Exception으로 되었있으면) 을 throw 하는 메소드가  아니면 빨간줄이 뜬다. 이걸 해결하려면 메인 메소드 안에서 try-catch 문으로 감싸야한다.
-        }catch (Exception e){
+        }catch (Exception e){ // Exception e 예외를 받으면 이렇게 처리하겠다 라는 코드
 //            e.getMessage();
            throw new RuntimeException(e);
         }

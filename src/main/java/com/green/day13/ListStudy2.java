@@ -10,8 +10,9 @@ public class ListStudy2 {
         //Generic 을 사용하면 실행할때 타입이 결정되는게 Generic 이다.
 
         //List< >  < >  이 안에는 기본타입은 못들어간다. 모든 기본타입은 참조타입이 있다. int 만 Integer 로 해주면 된다.
-        List<Integer> list=new ArrayList(); // 정수형 값만 들어갈 수 있는 ArrayList 객체가 만들어 짐.
+        List<Integer> list=new ArrayList<>(); // 정수형 값만 들어갈 수 있는 ArrayList 객체가 만들어 짐.
         List<Integer> list2=new ArrayList<>();
+
 
 
        // list.add("");//위에 Integer 즉 정수타입만 받을 수 있기 때문에 String 은 추가할 수 없다.

@@ -22,7 +22,7 @@ public class FruitAndBox2 {
 
 }
 
-class FruitBox{
+class FruitBox{ // 타입을 Object 로 해서 다른 타입의 객체들을 담을 수 있게 만들었다.
     private Object fruit;
 
     FruitBox(Object object){

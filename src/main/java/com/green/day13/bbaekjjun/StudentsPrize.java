@@ -18,48 +18,92 @@ public class StudentsPrize {
         List<String> students = new ArrayList<>();
         List<Integer> prize = new ArrayList<>();
 
-        while (true) {
-            System.out.println("학생 이름을 입력하세요> (종료를 원하면 exit)");
-            String str1 = scan.next();
-            if(str1.equals("exit")){
-                break;
+
+        try {
+            while (true) {
+                System.out.println("학생 이름을 입력하세요> (종료를 원하면 exit)");
+                String str1 = scan.next();
+                if (str1.equals("exit")) {
+                    break;
+                }
+                students.add(str1);
+
+
+                try {
+                    System.out.println("국어점수 >");
+                    int kor = scan.nextInt();
+                    if (kor < 0 || kor > 100) {
+                        throw new IllegalArgumentException();
+                    }
+                    System.out.println("영어점수 >");
+                    int eng = scan.nextInt();
+                    if (eng < 0 || eng > 100) {
+                        throw new IllegalArgumentException();
+                    }
+                    System.out.println("수학점수 >");
+                    int math = scan.nextInt();
+                    if (math < 0 || math > 100) {
+                        throw new IllegalArgumentException();
+                    }
+                    int sum = (kor + eng + math) / 3;
+                    prize.add(sum);
+
+                } catch (IllegalArgumentException e) {
+                    System.out.println("범위내의 숫자가 아닙니다");
+                    break;
+                } catch (Exception e) {
+                    System.out.println("숫자가 아닙니다");
+                    break;
+                }
             }
-            students.add(str1);
 
-
-            try {
-                System.out.println("국어점수 >");
-                int kor = scan.nextInt();
-                if(kor<0||kor>100){
-                    throw new IllegalArgumentException();
-                }
-                System.out.println("영어점수 >");
-                int eng = scan.nextInt();
-                if(eng<0||eng>100){
-                    throw new IllegalArgumentException();
-                }
-                System.out.println("수학점수 >");
-                int math = scan.nextInt();
-                if(math<0||math>100){
-                    throw new IllegalArgumentException();
-                }
-                int sum=(kor+eng+math)/3;
-                prize.add(sum);
-
-            }catch (IllegalArgumentException e){
-                System.out.println("범위내의 숫자가 아닙니다");
-                break;
-            }catch (Exception e){
-                System.out.println("숫자가 아닙니다");
-                break;
-            }
+        } finally {
+            scan.close();
+            System.out.println("---------결과-----------");
         }
 
-        for(int i=0;i< students.size();i++){
-            System.out.printf("학생이름: %s, 평균점수: %d\n",students.get(i),prize.get(i));
+
+        for (int i = 0; i < students.size(); i++) {
+            System.out.printf("학생이름: %s, 평균점수: %d\n", students.get(i), prize.get(i));
         }
 
 
+
+        /*
+        자바에서 일부러 예외를 던지려면 throw 문을 사용하여 예외 객체를 생성하고 던지면 됩니다. 예를 들어, 사용자 정의 예외를 던지는 코드는 다음과 같습니다:
+
+        public class CustomException extends Exception {
+         public CustomException(String message) {
+        super(message);
+         }
+         }
+
+        public class Main {
+        public static void main(String[] args) {
+        try {
+            checkValue(0);
+        } catch (CustomException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+        }
+
+        public static void checkValue(int value) throws CustomException {
+        if (value <= 0) {
+            throw new CustomException("Value must be greater than zero.");
+        }
+        System.out.println("Value is valid: " + value);
+        }
+        }
+
+        위 코드에서 checkValue 메서드는 값이 0 이하일 경우 CustomException 을 던집니다.
+        main 메서드에서 이 예외를 처리하고, 적절한 메시지를 출력합니다.
+
+
+
+
+
+
+         */
 
 
     }

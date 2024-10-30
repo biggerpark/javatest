@@ -67,7 +67,8 @@ class FinallyCase3 {
             //finally 가 붙으면 메소드에서 return 키워드를 만나도 return 키워드가 실행되고 finally 는 실행된다.
             try {
                 if(writer !=null){
-                    writer.close(); // writer.close()를 밖으로 빼고 무조건 실행되게 만든다.
+                    writer.close();// writer.close()를 밖으로 빼고 무조건 실행되게 만든다.
+                    System.out.println("하하");
                 }
             } catch (IOException e) {
 
