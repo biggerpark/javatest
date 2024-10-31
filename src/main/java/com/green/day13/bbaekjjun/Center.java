@@ -8,45 +8,27 @@ public class Center {
     정수 배열 array가 매개변수로 주어질 때, 중앙값을 return 하도록 solution 함수를 완성해보세요.
      */
 
-    public static int solution(int[] array) {
-//        int[] arr = new int[array.length];
-        int min = array[0];
-        int i = 0;
-//
-//        try {
-//            for (int i = 0; i < array.length; i++) {
-//                if(array[i]<min){
-//                    min=array[i];
-//                }
-//            }arr[0]=min;
-        for (i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-        }
-        array[0] = min;
 
-        try {
-            while (i + 1 < array.length) {
-                if (array[i + 1] > array[i + 2]) {
-                    int temp = array[i + 1];
-                    array[i + 1] = array[i + 2];
-                    array[i + 2] = temp;
+    public static int solution(int[] array) {
+        for(int i=0;i<array.length;i++){
+            for(int n=0;n<i;n++){
+                if(array[i]<array[n]){
+                    int temp=array[i];
+                    array[i]=array[n];
+                    array[n]=temp;
                 }
-                if (array.length % 2 == 1) {
-                    throw new Exception();
-                }
-                i++;
             }
-        } catch (Exception e) {
-            System.out.println("배열의 길이가 홀수가 아닙니다");
-        }
-        return array[1];
+        }return array[2];
     }
 
+
+
+
+
+
     public static void main(String[] args) {
-        int[] arr={6,4,5,1,8,9,2};
-        System.out.println(Center.solution(arr));
+        int[] array={8,9,1,3,4,6,7};
+        System.out.println(Center.solution(array));
     }
 
 }

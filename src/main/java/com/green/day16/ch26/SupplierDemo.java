@@ -14,7 +14,7 @@ public class SupplierDemo {
 
         /*
         public interface Supplier<T>{
-                T get();
+                void T get();
         }
 
          */
