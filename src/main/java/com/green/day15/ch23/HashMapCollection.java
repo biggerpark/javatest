@@ -19,10 +19,5 @@ public class HashMapCollection {
         System.out.println("v:"+v);
 
         System.out.println(map.get("김수지")); // 없으면 null 이 return 된다.
-
-
-
-
-
     }
 }
