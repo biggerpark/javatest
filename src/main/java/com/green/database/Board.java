@@ -58,5 +58,10 @@ public class Board { // 자바는 클래스는 파스칼케이스기법
     }
 
 
+    public String toString(){
+        return String.format("%d,%s,%s,%s,%s,%s",boardId,title,contents,writer,createdAt,updatedAt);
+    }
+
+
 
 }
